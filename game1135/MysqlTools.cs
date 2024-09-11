@@ -10,8 +10,6 @@ namespace game1135
     static class MysqlTools
     {
         static MySqlConnection mysql;
-
-
         public static List<T> SimpleSelectFromTable<T>(string whereSql = null)
         {
             List<T> result = new();
@@ -40,7 +38,6 @@ namespace game1135
                                 break;
                             }
                         }
-
                     }
                 }
                 return result;
@@ -74,7 +71,6 @@ namespace game1135
                                 break;
                             }
                         }
-
                     }
                 }
                 return result;
@@ -101,8 +97,6 @@ namespace game1135
             sql = $"delete from `{attribute.TableName}` where id = {row.ID}";
             using (var ms = new MySqlCommand(sql, mysql))
                 count = ms.ExecuteNonQuery();
-
-
             return count != 0;
         }
 

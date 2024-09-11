@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:game1135"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="MistyRose">
     <Grid>
-        <Label Content="cjsmcdc"/>
+        <Grid.ColumnDefinitions> 
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Content="GAMES" FontSize="65" Foreground="LightPink" HorizontalAlignment="Center"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="about us" FontSize="20" VerticalAlignment="Top" 
+                Foreground="LightPink" Background="MistyRose" BorderBrush="MistyRose" HorizontalAlignment="Center" />
+        <ListView Grid.Row="1" Grid.RowSpan="7" Grid.Column="3" Grid.ColumnSpan="3" Background="MistyRose">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Jenre}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Year}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Studio}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Content="add games?" Foreground="LightPink" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Content="add" Foreground="LightPink" Background="MistyRose" HorizontalAlignment="Center" BorderBrush="MistyRose" VerticalAlignment="Top"/>
     </Grid>
 </Window>
