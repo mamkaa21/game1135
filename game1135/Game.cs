@@ -9,15 +9,14 @@ namespace game1135
     [MysqlTable("game")]
     public class Game: BaseModel
     {
-        [MysqlTable("id")]
-        public int ID {  get; set; }
-        [MysqlTable("title")]
+
+        [MysqlColumn("title")]
         public string Title { get; set; }
-        [MysqlTable("id_gamestudio")]
+        [MysqlColumn("id_gamestudio")]
         public int ID_GameStudio { get; set; }
-        [MysqlTable("genre")]
+        [MysqlColumn("genre")]
         public string Genre { get; set; }
-        [MysqlTable("year")]
+        [MysqlColumn("year")]
         public string Year { get; set; }
     }
 }

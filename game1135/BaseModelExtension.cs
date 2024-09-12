@@ -7,8 +7,7 @@ using System.Reflection;
 
 namespace game1135
 {
-   
-  
+
         public static class BaseModelExtension
         {
             public static bool Insert(this BaseModel model)

@@ -75,12 +75,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Content="GAMES" FontSize="65" Foreground="LightPink" HorizontalAlignment="Center"/>
-        <Label Grid.Row="3" Content="Title:" FontSize="30" Foreground="LightPink" HorizontalAlignment="Right"/>
-        <TextBox Style="{DynamicResource TextBoxStyle1}" Grid.Row="3" Grid.Column="1" Background="MistyRose"/>
-        <Label Grid.Row="4" Grid.Column="0" Content="Genre:" FontSize="30" Foreground="LightPink" HorizontalAlignment="Right"/>
-        <TextBox Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="1" Background="MistyRose"/>
-        <Label Grid.Row="5" Grid.Column="0" Content="Year:" FontSize="30" Foreground="LightPink" HorizontalAlignment="Right"/>
-        <TextBox Style="{DynamicResource TextBoxStyle1}" Grid.Row="5" Grid.Column="1" Background="MistyRose"/>
+        <GroupBox Grid.Row="3" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="3" DataContext="{Binding SelectedGame}" BorderThickness="0 0 0 0" >
+            <StackPanel>
+                <Label Grid.Row="3" Content="Title:" FontSize="25" Foreground="LightPink" HorizontalAlignment="Left"/>
+                <TextBox Style="{DynamicResource TextBoxStyle1}" Grid.Row="3" Grid.Column="1" Background="MistyRose" Text="{Binding Title}"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="Genre:" FontSize="25" Foreground="LightPink" HorizontalAlignment="Left"/>
+                <TextBox Style="{DynamicResource TextBoxStyle1}" Grid.Row="4" Grid.Column="1" Background="MistyRose" Text="{Binding Genre}"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Year:" FontSize="25" Foreground="LightPink" HorizontalAlignment="Left"/>
+                <TextBox Style="{DynamicResource TextBoxStyle1}" Grid.Row="5" Grid.Column="1" Background="MistyRose" Text="{Binding Year}"/>
+            </StackPanel>
+        </GroupBox>  
         <Label Grid.Row="1" Grid.Column="4" Content="Photo" FontSize="30" Foreground="LightPink" HorizontalAlignment="Center"/>
         <Button Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Content="Add" FontSize="30" Background="MistyRose" BorderBrush="MistyRose" Foreground="LightPink" HorizontalAlignment="Center"/>
     </Grid>

@@ -9,9 +9,11 @@ namespace game1135
     [MysqlTable("gamestudio")]
     public class GameStudio: BaseModel
     {
-        [MysqlTable("id")]
-        public int ID {  get; set; }
-        [MysqlTable("name")]
+        [MysqlColumn("name")]
         public string Name { get; set; }
+        [MysqlRelation("game", "id_gamestudio")]
+        public List<Game> Games { get; set; }
+        [MysqlRelation("employee", "id_gamestudio")]
+        public List<Employee> Employees { get; set; }
     }
 }

@@ -28,18 +28,18 @@
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Content="GAMES" FontSize="65" Foreground="LightPink" HorizontalAlignment="Center"/>
         <Button Grid.Row="2" Grid.Column="1" Content="about us" FontSize="20" VerticalAlignment="Top" 
-                Foreground="LightPink" Background="MistyRose" BorderBrush="MistyRose" HorizontalAlignment="Center" />
-        <ListView Grid.Row="1" Grid.RowSpan="7" Grid.Column="3" Grid.ColumnSpan="3" Background="MistyRose">
+                Foreground="LightPink" Background="MistyRose" BorderBrush="MistyRose" HorizontalAlignment="Center" Click="OpenAboutGameStudio" />
+        <ListView Grid.Row="1" Grid.RowSpan="7" Grid.Column="3" Grid.ColumnSpan="3" Background="MistyRose" ItemsSource="{Binding Games}" SelectedItem="{Binding SelectedGame}" FontSize="20" Foreground="LightPink" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Title}" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Jenre}"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Year}"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Studio}"/>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Header="Jenre" DisplayMemberBinding="{Binding Jenre}"/>
+                    <GridViewColumn Header="Year" DisplayMemberBinding="{Binding Year}"/>
+                    <GridViewColumn Header="Game Studio" DisplayMemberBinding="{Binding ID_GameStudio}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Content="add games?" Foreground="LightPink" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Content="add" Foreground="LightPink" Background="MistyRose" HorizontalAlignment="Center" BorderBrush="MistyRose" VerticalAlignment="Top"/>
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Content="add" Click="OpenAddWindow" Foreground="LightPink" Background="MistyRose" HorizontalAlignment="Center" BorderBrush="MistyRose" VerticalAlignment="Top"/>
     </Grid>
 </Window>

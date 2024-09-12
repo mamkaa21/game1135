@@ -27,5 +27,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Content="GAMES" FontSize="65" Foreground="LightPink" HorizontalAlignment="Center"/>
+        <Label Grid.Row="3" Grid.ColumnSpan="2" Content="SUPERDUPERGAME" FontSize="25" Foreground="LightPink" Background="MistyRose"/>
+        <Label Grid.Row="4" Grid.ColumnSpan="2" Content="SUPERDUPERGAME" FontSize="25" Foreground="LightPink" Background="MistyRose"/>
+        <Label Grid.Row="5" Grid.ColumnSpan="2" Content="SUPERDUPERGAME" FontSize="25" Foreground="LightPink" Background="MistyRose"/>
     </Grid>
 </Window>

@@ -9,15 +9,13 @@ namespace game1135
     [MysqlTable("employee")]
     public class Employee: BaseModel
     {
-        [MysqlTable("id")]
-        public int ID { get; set; }
-        [MysqlTable("firstname")]
+        [MysqlColumn("firstname")]
         public string FirstName { get; set; }
-        [MysqlTable("lastname")]
+        [MysqlColumn("lastname")]
         public string LastName { get; set; }
-        [MysqlTable("role")]
+        [MysqlColumn("role")]
         public string Role { get; set; }
-        [MysqlTable("id_gamestudio")]
+        [MysqlColumn("id_gamestudio")]
         public int ID_GameStudio { get; set; }
     }
 }

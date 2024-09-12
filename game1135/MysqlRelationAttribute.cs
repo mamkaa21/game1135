@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace game1135
 {
-    internal class MysqlRelationAttribute
+    internal class MysqlRelationAttribute : Attribute
     {
         public MysqlRelationAttribute(string table, string secKey)
         {
