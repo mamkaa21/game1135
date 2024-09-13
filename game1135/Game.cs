@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace game1135
 {
+    internal class GameCollection
+    {
+        public static List<Game> Games { get; set; } = new List<Game>();
+    }
+
     [MysqlTable("game")]
     public class Game: BaseModel
     {
-
         [MysqlColumn("title")]
         public string Title { get; set; }
         [MysqlColumn("id_gamestudio")]

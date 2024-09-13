@@ -31,11 +31,25 @@ namespace game1135
             }
         }
 
+        private GameStudio selectedGameStudio;
+
+        public List<GameStudio> GameStudios { get; set; }
+        public GameStudio SelectedGameStudio
+        {
+            get => selectedGameStudio;
+            set
+            {
+                selectedGameStudio = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedGameStudio)));
+            }
+        }
 
         public MainWindow()
         {
             InitializeComponent();
+            new MysqlClass();
             DataContext = this;
+            
         }
 
         private void OpenAddWindow(object sender, RoutedEventArgs e)

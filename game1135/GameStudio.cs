@@ -5,9 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace game1135
-{  
+{
+    internal class GameStudioCollection
+    {
+        public static List<GameStudio> GameStudios { get; set; } = new List<GameStudio>();
+    }
+
     [MysqlTable("gamestudio")]
-    public class GameStudio: BaseModel
+    public class GameStudio : BaseModel
     {
         [MysqlColumn("name")]
         public string Name { get; set; }

@@ -14,7 +14,7 @@ namespace game1135
         public MysqlClass()
         {
             mySqlConnection = new MySqlConnection("server=192.168.200.13;user=student;password=student;database=games_1135;Character Set=utf8mb4");
-
+            MysqlTools.SetConnection(mySqlConnection);
             try
             {
                 mySqlConnection.Open();
